@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       홈
-      <p onClick={() => push("detail")}>스택 열기</p>
+      <p onClick={() => push({ href: "detail", params: ["1", "2", "3"] })}>스택 열기</p>
     </div>
   )
 }

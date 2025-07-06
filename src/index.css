@@ -21,7 +21,7 @@
 }
 
 .animate-stack-in {
-  animation: stack-in 0.2s ease-in-out forwards;
+  animation: stack-in 0.2s ease-out forwards;
 }
 
 .animate-stack-out {

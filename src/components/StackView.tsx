@@ -11,8 +11,8 @@ const StackView = () => {
     <>
       {
         stack.map(stack => {
-          switch(stack) {
-            case "detail": return <DetailStack />
+          switch(stack.href) {
+            case "detail": return <DetailStack params={stack.params} />
             case "detaildetail": return <DetailDetailStack />
           }
         })
