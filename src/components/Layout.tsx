@@ -7,8 +7,8 @@ const Layout = () => {
   const bottom = parseInt(new URLSearchParams(window.location.search).get("bottom")?.toString() || "0");
 
   return (
-    <div style={{ paddingTop: top, paddingBottom: bottom }} className="w-full h-screen relative">
-      <div className="w-full h-full bg-gray-50">
+    <div style={{ paddingTop: top, paddingBottom: bottom }} className="w-full h-screen relative bg-gray-50">
+      <div className="w-full h-full">
         <TabView />
       </div>
       <Tab bottom={bottom} />
