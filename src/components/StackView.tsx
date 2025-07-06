@@ -1,3 +1,4 @@
+import DetailDetailStack from "../screens/stacks/DetailDetailStack";
 import DetailStack from "../screens/stacks/DetailStack";
 import { useNavigationStore } from "../stores/useNavigationStore"
 
@@ -6,11 +7,18 @@ const StackView = () => {
 
   if(stack.length === 0) null;
 
-  for(const s of stack) {
-    switch(s) {
-      case "detail": return <DetailStack />
-    }
-  }
+  return(
+    <>
+      {
+        stack.map(stack => {
+          switch(stack) {
+            case "detail": return <DetailStack />
+            case "detaildetail": return <DetailDetailStack />
+          }
+        })
+      }
+    </>
+  )
 }
 
 export default StackView
